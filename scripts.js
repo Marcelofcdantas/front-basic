@@ -7,20 +7,20 @@ function createCustomElement(element, className, link) {
   return e;
 };
 
-function createProductImageElement(imageSource) {
+function createProductImageElement(imageSource, alt) {
   const img = document.createElement('img');
   img.className = 'photo';
   img.src = imageSource;
+  img.setAttribute('alt', alt)
   return img;
 };
 
-const settingImages = ({ image, link }) => {
+const settingImages = ({ image, link, alt }) => {
   const section = document.createElement('div');
   section.className = 'item';
   section.appendChild(createCustomElement('a', 'linking', link));
-  const linking = document.querySelector('.linking');
   const lastImage = section.lastChild;
-  lastImage.appendChild(createProductImageElement(image));
+  lastImage.appendChild(createProductImageElement(image, alt));
   return section;
 };
 
@@ -34,15 +34,16 @@ document.addEventListener("DOMContentLoaded", async function () {
   try {
     const datas =  await fetch(link);
     const jsonData = await datas.json();
+    console.log(jsonData);
     const loader = document.querySelector('.loader');
     const loading = document.querySelector('.loading');
     loading.remove();
     loader.remove();
-    console.log(jsonData);
     jsonData.forEach((photo) => {
       const images = {
         image: photo.imagens.thumbnail.url,
         link: photo.link,
+        alt: photo.legenda,
       };
       const item = settingImages(images);
       imageArea.appendChild(item);
