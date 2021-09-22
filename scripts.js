@@ -24,6 +24,11 @@ const settingImages = ({ image, link }) => {
   return section;
 };
 
+const setTarget = () => {
+  const link = document.querySelectorAll('.linking');
+  link.forEach((item) => item.setAttribute('target', '_blank'));
+};
+
 document.addEventListener("DOMContentLoaded", async function () {
   const link = 'https://us-central1-squid-apis.cloudfunctions.net/test-front-basic';
   try {
