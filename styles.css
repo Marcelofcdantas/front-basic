@@ -14,7 +14,7 @@ body {
 }
 
 .imageArea {
-  margin: 5%;
+  margin: 8%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -24,7 +24,8 @@ body {
 .photo {
   width: 200px;
   height: 200px;
-  box-shadow: #E399BA;
+  border:ridge  #E399BA;
+  filter:drop-shadow(5px 5px 5px #7C70D1);
 }
 
 .photo:hover {
@@ -33,6 +34,6 @@ body {
   height: 220px;
 }
 
-div {
-  margin: 10px;
+.item {
+  margin: 5px;
 }
