@@ -1,5 +1,29 @@
 const imageArea = document.querySelector('.imageArea');
 
+function createCustomElement(element, className, link) {
+  const e = document.createElement(element);
+  e.className = className;
+  e.href = link;
+  return e;
+};
+
+function createProductImageElement(imageSource) {
+  const img = document.createElement('img');
+  img.className = 'photo';
+  img.src = imageSource;
+  return img;
+};
+
+const settingImages = ({ image, link }) => {
+  const section = document.createElement('div');
+  section.className = 'item';
+  section.appendChild(createCustomElement('a', 'linking', link));
+  const linking = document.querySelector('.linking');
+  const lastImage = section.lastChild;
+  lastImage.appendChild(createProductImageElement(image));
+  return section;
+};
+
 document.addEventListener("DOMContentLoaded", async function () {
   const link = 'https://us-central1-squid-apis.cloudfunctions.net/test-front-basic';
   try {
@@ -15,9 +39,6 @@ document.addEventListener("DOMContentLoaded", async function () {
         image: photo.imagens.thumbnail.url,
         link: photo.link,
       };
-      images.onclick = function() {
-        window.location.href = photo.link;
-    };
       const item = settingImages(images);
       imageArea.appendChild(item);
     });
