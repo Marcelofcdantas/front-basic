@@ -1,3 +1,38 @@
 body {
   background: #fff;
 }
+
+.loading {
+  text-align: center;
+  margin-top: 20%;
+}
+
+.logo {
+  width: 15%;
+  margin-left: 40%;
+  margin-top: 3%;
+}
+
+.imageArea {
+  margin: 5%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  justify-items: center;
+}
+
+.photo {
+  width: 200px;
+  height: 200px;
+  box-shadow: #E399BA;
+}
+
+.photo:hover {
+  transition: 2s;
+  width: 220px;
+  height: 220px;
+}
+
+div {
+  margin: 10px;
+}
