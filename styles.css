@@ -24,14 +24,14 @@ body {
 .photo {
   width: 200px;
   height: 200px;
-  border:ridge  #E399BA;
-  filter:drop-shadow(5px 5px 5px #7C70D1);
 }
 
 .photo:hover {
   transition: 2s;
   width: 220px;
   height: 220px;
+  border:ridge  #E399BA;
+  filter:drop-shadow(5px 5px 5px #7C70D1);
 }
 
 .item {
