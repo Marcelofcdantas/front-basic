@@ -5,9 +5,21 @@
     <title>Squid Instagram Feed</title>
     <meta name="description" content="Squid Instagram Feed">
     <meta name="author" content="Squidapp">
-    <link rel="stylesheet" href="styles.css?v=1.0">
+    <link rel="stylesheet" href="./styles.css?v=1.0">
+    <link rel="stylesheet" href="path-to-files/dist/css/squid.min.css">
   </head>
+  <hearder>
+    <img src='./assets/logo.svg' class="logo">
+  </hearder>
   <body>
-    <script src="scripts.js"></script>
+    <main class="imageArea">
+      <div class="loader big border-lilac" role="status">
+        <span class="visually-hidden">
+          <h1 class="loading h1">Aguarde, carregando imagens</h1>
+        </span>
+      </div>
+    </main>
+    <script defer src="scripts.js"></script>
+    <script defer src='path-to-files/dist/js/squid.min.js'></script>
   </body>
-</html>
+  </html>
