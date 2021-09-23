@@ -1,3 +1,5 @@
+/* @import '~@squidit/css/src/scss/squid.scss'; */
+
 body {
   background: #fff;
 }
@@ -18,22 +20,34 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  justify-items: center;
 }
 
-.photo {
-  width: 200px;
-  height: 200px;
+.photoDiv {
+  text-align: center;
 }
 
-.photo:hover {
-  transition: 2s;
-  width: 220px;
-  height: 220px;
+i, p {
+  color: white;
+  visibility: hidden ;
+  margin-top: 20px;
+  text-align:inherit;
+  padding-top: 5px;
+}
+
+#show {
+  visibility: visible !important;
+}
+
+.item:hover {
+  transition: 1s;
   border:ridge  #E399BA;
   filter:drop-shadow(5px 5px 5px #7C70D1);
 }
 
 .item {
-  margin: 5px;
+  margin: 15px;
+  height: 200px;
+  width: 200px;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
