@@ -21,7 +21,7 @@ const settingImages = ({ image, link, alt, user, like, comments, createdDate }) 
   const linking = createLinkElement('a', 'linking', link);
   const div = document.createElement('div');
   linking.appendChild(div);
-  linking.style.backgroundImage = 'url('+image+')';
+  linking.style.backgroundImage = `url(${image})`;
   div.className = 'photoDiv';
   linking.className = 'item';
   const lastImage = linking.lastChild;
